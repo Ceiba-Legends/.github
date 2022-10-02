@@ -1,0 +1,19 @@
+on:
+  pull_request:
+      branches: ["develop"]
+      types: [closed]
+name: Envoi du code à SonarCloud
+jobs:
+  sonarcloud:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Récupération du code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

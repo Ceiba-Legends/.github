@@ -1,0 +1,5 @@
+{
+    "name": "SonarCloud",
+    "description": "Envoi du code sur SonarCloud une fois la brache merged. NB : vous devez setup le sonar.properties au préalable",
+    "filePatterns" : ["sonar.properties"]
+}

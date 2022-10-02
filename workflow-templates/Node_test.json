@@ -1,8 +1,0 @@
-{
-    "name": "Tests unitaires",
-    "description": "Lancement des tests unitaires et génération d'un rapport de coverage dans les artefacts",
-    "categories": [
-        "TypeScript",
-        "JavaScript"
-    ]
-}
